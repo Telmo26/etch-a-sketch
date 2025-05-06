@@ -27,4 +27,21 @@ function createGrid() {
     }
 }
 
+function deleteGrid() {
+    const children = document.querySelectorAll(".child")
+    children.forEach((child) => child.remove())
+}
+
+const button = document.querySelector("button")
+button.addEventListener("click", () => {
+    numberOfCells = Number(prompt("Chose a grid size (<100): "))
+    if (numberOfCells < 100) {
+        deleteGrid()
+        createGrid()
+    } else {
+        alert("Please choose a grid size under 100!")
+    }
+
+})
+
 createGrid()
