@@ -4,16 +4,28 @@
     padding: 0;
 }
 
-.container {
+.content {
     display: flex;
-    flex-wrap: wrap;
-    align-content: start;
+    flex-direction: column;
     height: min(100vh, 100vw);
     width: min(100vh, 100vw);
     margin: auto;
 }
 
+button {
+    flex: 0;
+}
+
+.container {
+    flex: 1 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+
 .child {
+    flex: 1 1;
     margin: 4px;
     border: 2px solid black;
 }
